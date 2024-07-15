@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic display</title>
+    <style>
+            .loader{
+                transform: rotate X(70deg);
+                margin-left: 10%;
+                animation: rotate 2s infinite;
+            }
+            .loader .element{
+                display: block;
+                border-left: 5px solid rgba(35, 199, 231);
+                border-right: 5px solid rgba(35, 199, 231);
+                border-top: dotted 2px rgb(29, 146, 170);
+                width: 10rem;
+                height: 1rem;
+                margin-top: 0.5rem;
+                perspective: 1000px;
+                animation: rotate 2s infinite linear;
+                animation-delay: calc(var(--i) * 0.2s);
+            }
+            @keyframes rotate {
+                100%{
+                    transform: rotate Y(360deg);
+                }
+                20%{
+                    transform: rotate(330deg);
+                }
+                10%{
+                    transform: rotate(160deg);
+                }
+            }@keyframes rotate {
+                0%{
+                    transform: translateY(0)
+                }
+                50%{
+                    transform: translateX(360px);
+                }
+                100%{
+                    transform: translateX(10px);
+                }
+            }
+
+
+
+      /*  form{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        input{
+            flex: 1 0 10rem;
+        }
+        button{
+            flex: 1 0 5rem;
+        }/*
+        
+
+      /*  #box{
+            width:80%;
+            padding: 20px auto;
+            border: 2px solid orangered;
+            background-color: orange;
+            padding: 70px;
+        }
+        #underbox{
+            width: 100%;
+            padding: 29px;
+            border-radius: 10px;
+            border: 1px solid yellow;
+            background-color: yellow;
+            display: block;
+        }
+        #button{
+            width: 80px;
+            height: 30px;
+            border-radius: 10px;
+            border: 2px solid black;
+            background-color: antiquewhite;
+        }  */
+    </style>
+
+</head>
+<body style="background-color: rgb(170, 206, 194);">
+<div class="loader">
+    <span style="--i:1" class="element"></span>
+    <span style="--i:2" class="element"></span>
+    <span style="--i:3" class="element"></span>
+    <span style="--i:4" class="element"></span>
+    <span style="--i:5" class="element"></span>
+    <span style="--i:6" class="element"></span>
+    <span style="--i:7" class="element"></span>
+    <span style="--i:8" class="element"></span>
+    <span style="--i:9" class="element"></span>
+    <span style="--i:10" class="element"></span>
+    <span style="--i:11" class="element"></span>
+    <span style="--i:12" class="element"></span>
+    <span style="--i:13" class="element"></span>
+    <span style="--i:14" class="element"></span>
+    <span style="--i:15" class="element"></span>
+
+</div>
+
+
+  <!--  <form>
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Email" />
+        <button type="submit">Subscribe</button>
+    </form>  -->
+
+
+
+
+   <!-- <div id="box"> box
+
+          <span id="underbox">
+          <button id="button">
+         Click Me
+          </button>
+          span
+        </span>
+    </div>
+    <script>
+        let box = document.querySelector("#button");
+
+        box.addEventListener("click",function(e){
+        e.target.remove();
+        });
+    </script>-->
+    
+</body>
+</html>

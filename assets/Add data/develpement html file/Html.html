@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html code</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script>
+      /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+      function openNav() {
+              document.getElementById("mySidebar").style.width = "200px";
+              
+            }
+            
+            /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+            function closeNav() {
+              document.getElementById("mySidebar").style.width = "0";
+              
+            }
+      
+                     let slideIndex = 1;
+      showSlides(slideIndex);
+      
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+          </script>
+
+    <style>
+    
+    @media only screen and (max-width:700){
+    body{
+        background-color: lightblue;
+    }
+}
+#home{
+    margin-left: 420px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+#home:hover{
+color: blue;
+}
+#Categories{
+    margin-top: 18.5px;
+    margin-left: 50px;
+}
+#About a{
+    margin-top: 12px;
+    margin-left: 50px;
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+}
+
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
+
+
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 35px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  flex-wrap: wrap;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  flex-wrap: wrap;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #82a7ec;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 2px 0px 5px 5px rgb(240, 223, 223);
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .3s; /* If you want a transition effect */
+  padding: 0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 750px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+ 
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.h1{
+    margin-top: 60px;
+    margin-left: 80px;
+}
+.p{
+  font-size: 18px;
+    margin-left: 80px;
+}
+
+#sec{
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+display: flex;
+margin-top: 50px;     
+}
+#second{
+width: 100%;
+flex-wrap: wrap;
+justify-content: space-evenly; 
+display: flex;
+margin-top: 50px;
+}
+
+
+#div{
+  padding-top: 60px;
+  margin-left: 45px;
+}
+#a{
+  margin: 25px;
+}
+#main-div{
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content:center;
+  padding: 20px; 
+}
+
+#Categories-1{
+  margin-left: 10px;
+}
+
+
+#Categories {
+  margin-top: 12px;
+}
+#Categories dropdown-menu{
+  text-align: center;
+  
+}
+
+
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed;
+  margin-top: rem; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #555853; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 70px; /* Place content 60px from the top */
+
+}
+
+
+</style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+        <div class="container-fluid">
+
+          <div class="sidebar" href="file:///C:/Users/CBC/Desktop/StudyRoom/index.html" id="mySidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div id="div"> <img src="iconimage.jpg"  style="width: 100px; height: 100px; border-radius: 10px;" ></div>
+
+
+            <a href="#" id="a">DiseBord</a>
+
+            <a class=" dropdown" id="Categories-1">
+              <button data-mdb-button-init
+              data-mdb-ripple-init data-mdb-dropdown-init class="btn  dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false">
+            Product
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li><a class="dropdown-item" href="fl">All courses</a></li>
+              <li><a class="dropdown-item" href="f">development</a></li>
+              <li><a class="dropdown-item" href="fiml"> display</a></li>
+              <li><a class="dropdown-item" href="fihtml">Add courses</a></li>
+              <li><a class="dropdown-item" href="fihtml">Design</a></li>
+            </ul> </a>
+     
+            <a href="#" id="a">Students</a>
+            <a href="file:///C:/Users/hp/Desktop/StudyRoom/assets/Add%20data/develpement%20html%20file/Contact%20us/Contactus.html" id="a">Contact</a>
+          </div>     
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; StudyRoom</button>  
+      </div>
+    
+    
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="file:///C:/Users/hp/Desktop/StudyRoom/index.html" id="home">Home</a>
+              </li>
+             
+              <li class="nav-item" id="About">  <a class="nav-link " aria-current="page"  href="file:///C:/Users/hp/Desktop/StudyRoom/assets/Add%20data/develpement%20html%20file/Html.html">HTML</a>
+                  
+              </li> 
+               
+                <li class="nav-item" id="About">  <a class="nav-link " aria-current="page"href="file:///C:/Users/hp/Desktop/StudyRoom/assets/Add%20data/develpement%20html%20file/vedio.html">C & C++</a>
+                  
+                </li>  
+    
+            
+                <li class="nav-item" id="About">  <a class="nav-link " aria-current="page" href="file:///C:/Users/hp/Desktop/StudyRoom/assets/Add%20data/develpement%20html%20file/JavaScript.html">JavaScript</a>
+                  
+                </li>    
+              
+                <li class="nav-item" id="About">  <a class="nav-link " aria-current="page" href="file:///C:/Users/hp/Desktop/StudyRoom/assets/Add%20data/develpement%20html%20file/pythan.html">Pythan</a>    
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+   
+    
+  <div class="container">
+    <h1 class="h1">HTML class</h1>
+    <p class="p"> <b style="color: red; text-shadow: 0px 1px;">Live </b> on the way..</p>
+  </div>
+
+  <div id="sec">
+
+    <div class="main-card-div"  >
+        <div class="card" style="width: 20rem;"> 
+         <video class="card-img-top" width="300px" controls src="vedio/4487973-hd_1920_1080_25fps.mp4" type="video/mp4"></video>
+         <div class="card-body">
+             <h4  class="card-title">HTML Full Courses for free</h4>
+         <p class="card-text">What is HTML,Its Introduction 
+             <br>and History | CPP  <br>(Programming video Tutorial)
+         </p>
+         </div>
+        </div>
+    </div>
+
+    <div class="main-card-div"  >
+        <div class="card" style="width: 20rem;"> 
+         <video class="card-img-top" width="300px" controls src="vedio/4494801-uhd_3840_2160_25fps.mp4" type="video/mp4"></video>
+         <div class="card-body">
+             <h4  class="card-title">HTML Full Courses for free</h4>
+         <p class="card-text">How to Learn html Prpgramming  
+             
+            <br>Languages with<br>(Full information)
+         </p>
+         </div>
+        </div>
+    </div>
+
+    <div class="main-card-div"  >
+        <div class="card" style="width: 20rem;"> 
+         <video class="card-img-top" width="300px" controls src="vedio/4537969-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
+         <div class="card-body">
+             <h4  class="card-title">HTML Full Courses for free</h4>
+         <p class="card-text">Complate Html Tutorial in One
+             
+            <br>Shot 2024 | Beginners to Advance <br>(Basics of html)
+         </p>
+         </div>
+        </div>
+    </div>
+
+    <div class="main-card-div"  >
+        <div class="card" style="width: 20rem;"> 
+         <video class="card-img-top" width="300px" controls src="vedio/6996464-uhd_3840_2160_30fps.mp4" type="video/mp4"></video>
+         <div class="card-body">
+             <h4  class="card-title">HTML Full Courses for free</h4>
+         <p class="card-text">Complate Html Tutorial in One
+             
+            <br>Shot 2024 | Beginners to Advance <br>(Basics of html)
+         </p>
+         </div>
+        </div>
+    </div>
+
+    <div id="second">
+
+
+    <div class="main-card-div"  >
+        <div class="card" style="width: 20rem;"> 
+         <video class="card-img-top" width="300px" controls src="vedio/vecteezy_cute-girl-studying-and-writing-during-doing-homework-on-the_3220364.mp4" type="video/mp4"></video>
+         <div class="card-body">
+             <h4  class="card-title">HTML Full Courses for free</h4>
+         <p class="card-text">How to Learn html Prpgramming  
+             
+            <br>Languages with<br>(Full information)
+         </p>
+         </div>
+        </div>
+    </div>
+
+    <div class="main-card-div"  >
+        <div class="card" style="width: 20rem;"> 
+         <video class="card-img-top" width="300px" controls src="vedio/4494801-uhd_3840_2160_25fps.mp4" type="video/mp4"></video>
+         <div class="card-body">
+             <h4  class="card-title">HTML Full Courses for free</h4>
+         <p class="card-text">What is HTML,Its Introduction 
+             <br>and History | CPP  <br>(Programming video Tutorial)
+         </p>
+         </div>
+        </div>
+    </div>
+
+    <div class="main-card-div"  >
+        <div class="card" style="width: 20rem;"> 
+         <video class="card-img-top" width="300px" controls src="vedio/4537969-hd_1920_1080_30fps.mp4" type="video/mp4"></video>
+         <div class="card-body">
+             <h4  class="card-title">HTML Full Courses for free</h4>
+         <p class="card-text">How to Learn html Prpgramming  
+             
+            <br>Languages with<br>(Full information)
+         </p>
+         </div>
+        </div>
+    </div>
+
+    <div class="main-card-div"  >
+        <div class="card" style="width: 20rem;"> 
+         <video class="card-img-top" width="300px" controls src="vedio/5200023-uhd_3840_2160_25fps.mp4" type="video/mp4"></video>
+         <div class="card-body">
+             <h4  class="card-title">HTML Full Courses for free</h4>
+         <p class="card-text">How to Learn html Prpgramming  
+             
+            <br>Languages with<br>(Full information)
+         </p>
+         </div>
+        </div>
+    </div>
+
+
+</div>
+
+  
+ 
+
+        
+
+    </div>
+    
+</body>
+</html>

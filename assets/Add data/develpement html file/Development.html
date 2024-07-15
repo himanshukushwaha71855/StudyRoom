@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses/Development</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script>
+        /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+        function openNav() {
+                document.getElementById("mySidebar").style.width = "200px";
+                
+              }
+              
+              /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+              function closeNav() {
+                document.getElementById("mySidebar").style.width = "0";
+                
+              }
+        
+                       let slideIndex = 1;
+        showSlides(slideIndex);
+        
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("demo");
+          let captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+            </script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .continar{
+            width: 100%;
+            height: 100%;
+            flex-wrap: wrap;
+             gap: 0.5rem;
+        }
+        h1{
+            padding: 20px;
+        }
+        h3{
+            margin-left: 20px;
+        }
+        p{
+            color: rgb(144, 152, 158);
+            font-size: 13px;
+            margin-left: 20px;
+            margin-top: 5px
+        }
+        nav{
+            display: flex;
+        }
+        nav ul{
+            display: flex;
+            list-style: none;
+            margin-left: 20px;
+            text-decoration: none;
+            color: rgb(17, 17, 20);
+            font-weight: bold;
+            font-size: 16px;
+        }
+        nav ul li{
+            margin: 15px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .line{
+            width: 100%;
+            margin-top: -15px;
+            border: 1px solid;
+            box-shadow: 1px 2px 15px;
+        }
+        .continar .navbar{
+            display: flex;
+            width: 100%;
+            height: 50px;
+            box-shadow: 2px 1px 15px rgb(197, 190, 177) ;
+            border: 1px solid white;
+            text-align: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            
+        }
+        #select{
+            margin-left: 490px;
+        } 
+        .continar .navbar ul li a:hover{
+            color: aqua;
+        }
+        nav ul li a:hover{
+            color: aqua;
+        }
+        nav ul li:hover{
+            color: aqua;
+        }
+        .container-card{
+            display: flex;
+            margin-top: 20px;
+            justify-content: center;
+            align-content: space-evenly;
+            flex-wrap: wrap;
+           justify-content: space-evenly;
+           display: flex;
+     
+        }
+       
+   
+
+    
+    
+    @media only screen and (max-width:700){
+    body{
+        background-color: lightblue;
+    }
+}
+#home{
+    margin-left: 420px;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+#home:hover{
+color: blue;
+}
+#Categories{
+    margin-top: 18.5px;
+    margin-left: 50px;
+}
+#About a{
+    margin-top: 12px;
+    margin-left: 50px;
+    font-weight: bold;
+    color: black;
+    font-size: 17px;
+}
+
+#div{
+padding-top: 60px;
+margin-left: 45px;
+}
+#a{
+margin: 25px;
+}
+#main-div{
+display: inline-flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-evenly;
+align-content:center;
+padding: 20px; 
+}
+
+#Categories-1{
+margin-left: 10px;
+}
+
+
+#Categories {
+margin-top: 12px;
+}
+#Categories dropdown-menu{
+text-align: center;
+
+}
+
+
+.sidebar {
+height: 100%; /* 100% Full-height */
+width: 0; /* 0 width - change this with JavaScript */
+position: fixed;
+margin-top: rem; /* Stay in place */
+z-index: 1; /* Stay on top */
+top: 0;
+left: 0;
+background-color: #555853; /* Black*/
+overflow-x: hidden; /* Disable horizontal scroll */
+padding-top: 70px; /* Place content 60px from the top */
+transition: 0.3s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+padding: 8px 8px 8px 35px;
+text-decoration: none;
+font-size: 25px;
+color: #818181;
+display: block;
+transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+position: absolute;
+top: 0;
+right: 25px;
+font-size: 36px;
+margin-left: 50px;
+flex-wrap: wrap;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+flex-wrap: wrap;
+font-size: 18px;
+cursor: pointer;
+background-color: #82a7ec;
+color: white;
+padding: 10px 15px;
+border: none;
+border-radius: 10px;
+font-weight: bold;
+box-shadow: 2px 0px 5px 5px rgb(240, 223, 223);
+}
+
+.openbtn:hover {
+background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+transition: margin-left .3s; /* If you want a transition effect */
+padding: 0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 750px) {
+.sidebar {padding-top: 15px;}
+.sidebar a {font-size: 18px;}
+}
+
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .container-sm, .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container-md, .container-sm, .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container-lg, .container-md, .container-sm, .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
+    max-width: 1320px;
+  }
+}
+
+
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 35px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+  flex-wrap: wrap;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  flex-wrap: wrap;
+  font-size: 18px;
+  cursor: pointer;
+  background-color: #82a7ec;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 2px 0px 5px 5px rgb(240, 223, 223);
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .3s; /* If you want a transition effect */
+  padding: 0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 750px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+ 
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+.h1{
+    margin-top: 60px;
+    margin-left: 80px;
+}
+.p{
+  font-size: 18px;
+    margin-left: 80px;
+}
+
+#sec{
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+display: flex;
+margin-top: 50px;     
+}
+#second{
+width: 100%;
+flex-wrap: wrap;
+justify-content: space-evenly; 
+display: flex;
+margin-top: 50px;
+}
+
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+        <div class="container-fluid">
+      
+          <div class="sidebar" href="file:///C:/Users/CBC/Desktop/StudyRoom/index.html" id="mySidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div id="div"> <img src="iconimage.jpg"  style="width: 100px; height: 100px; border-radius: 10px;" ></div>
+  
+  
+            <a href="#" id="a">DiseBord</a>
+  
+            <a class=" dropdown" id="Categories-1">
+              <button data-mdb-button-init
+              data-mdb-ripple-init data-mdb-dropdown-init class="btn  dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              data-mdb-toggle="dropdown"
+              aria-expanded="false">
+            Product
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              
+            </ul> </a>
+     
+            <a href="#" id="a">Students</a>
+            <a href="file:///C:/Users/hp/Desktop/StudyRoom/assets/Add%20data/develpement%20html%20file/Contact%20us/Contactus.html" id="a">Contact</a>
+          </div>     
+      <div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776; StudyRoom</button>  
+      </div>
+  
+  
+  
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="file:///C:/Users/hp/Desktop/StudyRoom/index.html" id="home">Home</a>
+              </li>
+            
+              <li class="nav-item" id="About">  <a class="nav-link " aria-current="page"  href="#">Most Popular</a>
+                  
+              </li> 
+              
+                <li class="nav-item" id="About">  <a class="nav-link " aria-current="page"href="#">New</a>
+                  
+                </li>  
+  
+            
+              
+              
+                <li class="nav-item" id="About">  <a class="nav-link " aria-current="page" href="#">Trending</a>    
+                </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <div class="continar">
+     
+        <h1>Web Development Courses</h1>
+        <br>
+        <h3>Courses to get you started</h3>
+        <p>Explore courses from experienced, real-work experts.</p>
+        <br>
+    
+        <div class="line container-xxl" id="secnav"></div>
+        <div class="container-card">
+
+        <div class="card" id="card1" style="width: 18rem;">
+            <img src="1.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Javascript Beginners</h5>
+              <p class="card-text">SkillSprints lnc.</p>
+              <p id="">4.4 (2,980)</p><br>
+              <h1 id="">Rs.549</h1> <br>
+            </div></div>
+
+            <div class="card" id="card2" style="width: 18rem;">
+                <img src="2.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Become a Certified Web Developer: <br>HTML,CSS and JavaScript</h5></h5>
+                  <p class="card-text">SkillSprints lnc.Mark Lassoff</p>
+                  <p id="">4.4 (2,980)</p>
+                  <h1 id="">Rs.500</h1> 
+                </div></div>
+
+          <div class="card" id="card3" style="width: 18rem;">
+                 <img src="3.jpg" class="card-img-top" alt="...">
+                 <div class="card-body">
+                 <h5 class="card-title">AJAX Development</h5></h5>
+                  <p class="card-text">SkillSprints lnc.Mark Lassoff</p>
+                 <p id="">4.4 (2,980)</p><br>
+                 <h1 id="">Rs.669</h1> <br>
+                    </div></div>
+    
+                </div>
+   
+    </div>
+</div>
+
+</body>
+</html>
